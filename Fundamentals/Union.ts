@@ -10,9 +10,9 @@ interface Admin {
     role: string;
 }
 
-type Person = User | Admin;
+export type Person = User | Admin;
 
-const persons: Person[] = [
+export const persons: Person[] = [
     {
         name: 'Max Mustermann',
         age: 25,
@@ -35,7 +35,7 @@ const persons: Person[] = [
     }
 ];
 
-function logPerson(person: Person) {
+export function logPerson(person: Person) {
     let additionalInformation: string;
     if ("role" in person) {
         additionalInformation = person.role;
